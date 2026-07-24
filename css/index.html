@@ -27,7 +27,7 @@
         }
 
         @media (prefers-color-scheme: dark) {
-            :root {
+            :root:not([data-theme="light"]) {
                 --background: #292826;
                 --foreground: #c4bfb3;
                 --cursor: #a09a8e;
@@ -47,6 +47,27 @@
                 --cyan: #6a8c82;
                 --white: #c4bfb3;
             }
+        }
+
+        :root[data-theme="dark"] {
+            --background: #292826;
+            --foreground: #c4bfb3;
+            --cursor: #a09a8e;
+            --selection: #4a4640;
+            --surface: #35322e;
+            --surface-highlight: #3e3b36;
+            --border: #4a4640;
+            --accent: #8a9a7e;
+            --muted: #7a756c;
+            --highlight: #5a554f;
+            --black: #3a352f;
+            --red: #a86060;
+            --green: #7a8a60;
+            --yellow: #9a8a60;
+            --blue: #6c7c90;
+            --magenta: #8a6e7a;
+            --cyan: #6a8c82;
+            --white: #c4bfb3;
         }
 
         * {
@@ -172,6 +193,24 @@
         ::selection {
             background: var(--selection);
         }
+
+        .theme-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.3rem 0.65rem;
+            font-family: ui-monospace, monospace;
+            font-size: 0.8rem;
+            color: var(--foreground);
+            cursor: pointer;
+        }
+
+        .theme-toggle:hover {
+            background: var(--surface-highlight);
+        }
     </style>
 </head>
 <body>
@@ -254,7 +293,32 @@
 }</code></pre>
 
     <p style="margin-top: 1.5rem; color: var(--muted); font-size: 0.85rem;">
-        Respects <code>prefers-color-scheme</code>. Toggle your system theme to see the dark variant.
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">auto</button>
     </p>
+
+    <script>
+        const html = document.documentElement;
+        const btn = document.getElementById('theme-toggle');
+
+        const modes = ['auto', 'light', 'dark'];
+        const labels = { auto: 'auto', light: 'light', dark: 'dark' };
+
+        let mode = localStorage.getItem('silica-theme') || 'auto';
+
+        function apply(m) {
+            mode = m;
+            if (mode === 'auto') html.removeAttribute('data-theme');
+            else html.setAttribute('data-theme', mode);
+            btn.textContent = labels[mode];
+            localStorage.setItem('silica-theme', mode);
+        }
+
+        btn.addEventListener('click', () => {
+            const i = modes.indexOf(mode);
+            apply(modes[(i + 1) % modes.length]);
+        });
+
+        apply(mode);
+    </script>
 </body>
 </html>
