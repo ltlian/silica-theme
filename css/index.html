@@ -24,6 +24,7 @@
             --magenta: #7a5e6e;
             --cyan: #5e7a6e;
             --white: #c4bfb3;
+            --lcd-shadow: 3px 3px 0 rgba(58, 53, 47, 0.15);
         }
 
         @media (prefers-color-scheme: dark) {
@@ -88,15 +89,17 @@
 
         h1 {
             font-size: 2rem;
-            font-weight: 400;
+            font-weight: 700;
             letter-spacing: -0.02em;
             margin-bottom: 0.5rem;
+            text-shadow: var(--lcd-shadow);
         }
 
         .subtitle {
             color: var(--muted);
             font-size: 0.95rem;
             margin-bottom: 2.5rem;
+            text-shadow: var(--lcd-shadow);
         }
 
         .swatch-grid {
@@ -108,7 +111,6 @@
 
         .swatch {
             border: 1px solid var(--border);
-            border-radius: 4px;
             overflow: hidden;
         }
 
@@ -128,9 +130,9 @@
         .demo-box {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 6px;
             padding: 1.25rem;
             margin-bottom: 1.5rem;
+            box-shadow: var(--lcd-shadow);
         }
 
         .demo-box.highlight {
@@ -146,7 +148,6 @@
 
         .chip {
             padding: 0.35rem 0.75rem;
-            border-radius: 4px;
             font-size: 0.85rem;
             font-family: ui-monospace, monospace;
         }
@@ -172,13 +173,11 @@
             font-size: 0.9em;
             background: var(--surface);
             padding: 0.15rem 0.35rem;
-            border-radius: 3px;
         }
 
         pre {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 6px;
             padding: 1rem;
             overflow-x: auto;
             font-size: 0.85rem;
@@ -200,7 +199,6 @@
             gap: 0.35rem;
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 4px;
             padding: 0.3rem 0.65rem;
             font-family: ui-monospace, monospace;
             font-size: 0.8rem;
@@ -215,7 +213,7 @@
 </head>
 <body>
     <h1>silica</h1>
-    <p class="subtitle">A soft, muted color palette inspired by reflective LCDs</p>
+    <p class="subtitle">A muted color palette inspired by reflective LCDs</p>
 
     <div class="swatch-grid">
         <div class="swatch">
