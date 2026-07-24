@@ -1,15 +1,15 @@
 # Silica theme for Alacritty
 
 [colors.primary]
-background = "#2a2824"
+background = "#292826"
 foreground = "#c4bfb3"
 
 [colors.cursor]
-text = "#2a2824"
+text = "#292826"
 cursor = "#a09a8e"
 
 [colors.vi_mode_cursor]
-text = "#2a2824"
+text = "#292826"
 cursor = "#a09a8e"
 
 [colors.selection]
@@ -18,7 +18,7 @@ background = "#4a4640"
 
 [colors.search.matches]
 foreground = "CellBackground"
-background = "#6e7e8a"
+background = "#6c7c90"
 
 [colors.search.focused_match]
 foreground = "CellBackground"
@@ -30,30 +30,30 @@ foreground = "#c4bfb3"
 
 [colors.normal]
 black = "#3a352f"
-red = "#a07070"
-green = "#7e8a6e"
+red = "#a86060"
+green = "#7a8a60"
 yellow = "#9a8a60"
-blue = "#6e7e8a"
+blue = "#6c7c90"
 magenta = "#8a6e7a"
-cyan = "#6e8a7e"
+cyan = "#6a8c82"
 white = "#c4bfb3"
 
 [colors.bright]
 black = "#4a4640"
-red = "#b08080"
-green = "#8e9a7e"
+red = "#b86b6b"
+green = "#8a9a70"
 yellow = "#aa9a70"
-blue = "#7e8e9a"
+blue = "#7c8ca0"
 magenta = "#9a7e8a"
-cyan = "#7e9a8e"
+cyan = "#7a9c92"
 white = "#d4cfc3"
 
 [colors.dim]
 black = "#2a2824"
-red = "#805050"
-green = "#5e6a4e"
+red = "#884545"
+green = "#5a6a40"
 yellow = "#7a6a40"
-blue = "#4e5e6a"
+blue = "#4c5c70"
 magenta = "#6a4e5a"
-cyan = "#4e6a5e"
+cyan = "#4a6c62"
 white = "#a09a8e"
