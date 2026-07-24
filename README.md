@@ -16,6 +16,11 @@ of truth. The palette includes both **light** and **dark** variants.
 
 Open `css/index.html` in a browser to preview the palette.
 
+## Previews
+
+![Silica — light variant](screenshots/screenshot-light.png)
+![Silica — dark variant](screenshots/screenshot-dark.png)
+
 ## AI Usage
 
 AI disclosure: see [AI_DISCLOSURE.md](./AI_DISCLOSURE.md).
