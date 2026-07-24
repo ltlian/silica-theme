@@ -1,0 +1,46 @@
+{
+  "name": "silica",
+  "description": "A soft, muted color palette inspired by reflective LCDs and warm off-white UI",
+  "variants": {
+    "light": {
+      "background": "#e8e4d9",
+      "foreground": "#3a352f",
+      "surface": "#ddd8cc",
+      "surfaceHighlight": "#f0ece2",
+      "border": "#c4bfb3",
+      "accent": "#7a8a6e",
+      "muted": "#8a857c",
+      "highlight": "#b5b0a4",
+      "selection": "#c9c4b8",
+      "cursor": "#5a554f",
+      "black": "#3a352f",
+      "red": "#8f5e5e",
+      "green": "#6e7a5e",
+      "yellow": "#8a7a50",
+      "blue": "#5e6e7a",
+      "magenta": "#7a5e6e",
+      "cyan": "#5e7a6e",
+      "white": "#c4bfb3"
+    },
+    "dark": {
+      "background": "#2a2824",
+      "foreground": "#c4bfb3",
+      "surface": "#35322e",
+      "surfaceHighlight": "#3e3b36",
+      "border": "#4a4640",
+      "accent": "#8a9a7e",
+      "muted": "#7a756c",
+      "highlight": "#5a554f",
+      "selection": "#4a4640",
+      "cursor": "#a09a8e",
+      "black": "#3a352f",
+      "red": "#a07070",
+      "green": "#7e8a6e",
+      "yellow": "#9a8a60",
+      "blue": "#6e7e8a",
+      "magenta": "#8a6e7a",
+      "cyan": "#6e8a7e",
+      "white": "#c4bfb3"
+    }
+  }
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silica theme</title>
+    <style>
+        :root {
+            --background: #e8e4d9;
+            --foreground: #3a352f;
+            --cursor: #5a554f;
+            --selection: #c9c4b8;
+            --surface: #ddd8cc;
+            --surface-highlight: #f0ece2;
+            --border: #c4bfb3;
+            --accent: #7a8a6e;
+            --muted: #8a857c;
+            --highlight: #b5b0a4;
+            --black: #3a352f;
+            --red: #8f5e5e;
+            --green: #6e7a5e;
+            --yellow: #8a7a50;
+            --blue: #5e6e7a;
+            --magenta: #7a5e6e;
+            --cyan: #5e7a6e;
+            --white: #c4bfb3;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #2a2824;
+                --foreground: #c4bfb3;
+                --cursor: #a09a8e;
+                --selection: #4a4640;
+                --surface: #35322e;
+                --surface-highlight: #3e3b36;
+                --border: #4a4640;
+                --accent: #8a9a7e;
+                --muted: #7a756c;
+                --highlight: #5a554f;
+                --black: #3a352f;
+                --red: #a07070;
+                --green: #7e8a6e;
+                --yellow: #9a8a60;
+                --blue: #6e7e8a;
+                --magenta: #8a6e7a;
+                --cyan: #6e8a7e;
+                --white: #c4bfb3;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .swatch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .swatch {
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .swatch-color {
+            height: 64px;
+        }
+
+        .swatch-label {
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8rem;
+            font-family: ui-monospace, monospace;
+            background: var(--surface);
+            color: var(--foreground);
+        }
+
+        .demo-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .demo-box.highlight {
+            background: var(--surface-highlight);
+        }
+
+        .demo-row {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 0.75rem;
+        }
+
+        .chip {
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-family: ui-monospace, monospace;
+        }
+
+        .chip.red { background: var(--red); color: var(--background); }
+        .chip.green { background: var(--green); color: var(--background); }
+        .chip.yellow { background: var(--yellow); color: var(--background); }
+        .chip.blue { background: var(--blue); color: var(--background); }
+        .chip.magenta { background: var(--magenta); color: var(--background); }
+        .chip.cyan { background: var(--cyan); color: var(--background); }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            font-family: ui-monospace, monospace;
+            font-size: 0.9em;
+            background: var(--surface);
+            padding: 0.15rem 0.35rem;
+            border-radius: 3px;
+        }
+
+        pre {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1rem;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            margin-top: 0.75rem;
+        }
+
+        pre code {
+            background: transparent;
+            padding: 0;
+        }
+
+        ::selection {
+            background: var(--selection);
+        }
+    </style>
+</head>
+<body>
+    <h1>silica</h1>
+    <p class="subtitle">A soft, muted color palette inspired by reflective LCDs</p>
+
+    <div class="swatch-grid">
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--background)"></div>
+            <div class="swatch-label">background</div>
+        </div>
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--foreground)"></div>
+            <div class="swatch-label">foreground</div>
+        </div>
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--cursor)"></div>
+            <div class="swatch-label">cursor</div>
+        </div>
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--selection)"></div>
+            <div class="swatch-label">selection</div>
+        </div>
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--surface)"></div>
+            <div class="swatch-label">surface</div>
+        </div>
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--surface-highlight)"></div>
+            <div class="swatch-label">surface-highlight</div>
+        </div>
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--border)"></div>
+            <div class="swatch-label">border</div>
+        </div>
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--accent)"></div>
+            <div class="swatch-label">accent</div>
+        </div>
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--muted)"></div>
+            <div class="swatch-label">muted</div>
+        </div>
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--highlight)"></div>
+            <div class="swatch-label">highlight</div>
+        </div>
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--black)"></div>
+            <div class="swatch-label">black</div>
+        </div>
+        <div class="swatch">
+            <div class="swatch-color" style="background: var(--white)"></div>
+            <div class="swatch-label">white</div>
+        </div>
+    </div>
+
+    <div class="demo-box">
+        <p>This is a <strong>demo box</strong> on the default surface color. It shows how text, <a href="#">links</a>, and <code>inline code</code> look against the surface background.</p>
+    </div>
+
+    <div class="demo-box highlight">
+        <p>This is a <strong>highlighted demo box</strong> on the surface-highlight color. Use this for callouts or emphasized sections.</p>
+    </div>
+
+    <div class="demo-box">
+        <p>Semantic color chips:</p>
+        <div class="demo-row">
+            <span class="chip red">red</span>
+            <span class="chip green">green</span>
+            <span class="chip yellow">yellow</span>
+            <span class="chip blue">blue</span>
+            <span class="chip magenta">magenta</span>
+            <span class="chip cyan">cyan</span>
+        </div>
+    </div>
+
+    <pre><code>function hello() {
+    console.log("silica theme");
+}</code></pre>
+
+    <p style="margin-top: 1.5rem; color: var(--muted); font-size: 0.85rem;">
+        Respects <code>prefers-color-scheme</code>. Toggle your system theme to see the dark variant.
+    </p>
+</body>
+</html>
