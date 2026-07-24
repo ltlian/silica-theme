@@ -11,7 +11,8 @@ of truth. The palette includes both **light** and **dark** variants.
 
 | Integration | File | Variant |
 |-------------|------|---------|
-| Alacritty | [`alacritty/silica.toml`](alacritty/silica.toml) | dark |
+| Alacritty | [`alacritty/silica-dark.toml`](alacritty/silica-dark.toml) | dark |
+| Alacritty | [`alacritty/silica-light.toml`](alacritty/silica-light.toml) | light |
 | CSS | [`css/index.html`](css/index.html) | light + dark (via `prefers-color-scheme`) |
 
 Open `css/index.html` in a browser to preview the palette.

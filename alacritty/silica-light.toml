@@ -1,0 +1,59 @@
+# Silica light theme for Alacritty
+
+[colors.primary]
+background = "#e8e4d9"
+foreground = "#3a352f"
+
+[colors.cursor]
+text = "#e8e4d9"
+cursor = "#5a554f"
+
+[colors.vi_mode_cursor]
+text = "#e8e4d9"
+cursor = "#5a554f"
+
+[colors.selection]
+text = "CellForeground"
+background = "#c9c4b8"
+
+[colors.search.matches]
+foreground = "CellBackground"
+background = "#5e6e7a"
+
+[colors.search.focused_match]
+foreground = "CellBackground"
+background = "#7a8a6e"
+
+[colors.footer_bar]
+background = "#ddd8cc"
+foreground = "#3a352f"
+
+[colors.normal]
+black = "#3a352f"
+red = "#b46868"
+green = "#6e7d5e"
+yellow = "#8a7a50"
+blue = "#6a78b0"
+magenta = "#7a5e6e"
+cyan = "#6a8678"
+white = "#c4bfb3"
+
+[colors.bright]
+black = "#4a453f"
+red = "#ac7878"
+green = "#7e8a6e"
+yellow = "#9a8a60"
+blue = "#7a88a0"
+magenta = "#8a6e7e"
+cyan = "#7a9688"
+white = "#d4cfc3"
+
+[colors.dim]
+black = "#2a251f"
+red = "#7f4e4e"
+green = "#5e6a4e"
+yellow = "#7a6a40"
+blue = "#4e5e6a"
+magenta = "#6a4e5e"
+cyan = "#4e6a5e"
+white = "#b4afa3"
