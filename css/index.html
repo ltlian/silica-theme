@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
     <title>silica theme</title>
     <style>
         :root {
@@ -169,19 +170,12 @@
         }
 
         code {
-            font-family: ui-monospace, monospace;
-            font-size: 0.9em;
             background: var(--surface);
-            padding: 0.15rem 0.35rem;
         }
 
         pre {
             background: var(--surface);
             border: 1px solid var(--border);
-            padding: 1rem;
-            overflow-x: auto;
-            font-size: 0.85rem;
-            margin-top: 0.75rem;
         }
 
         pre code {
@@ -208,6 +202,61 @@
 
         .theme-toggle:hover {
             background: var(--surface-highlight);
+        }
+
+        /* Highlight.js custom silica theme */
+        .hljs {
+            color: var(--foreground);
+            background: transparent;
+        }
+        .hljs-comment,
+        .hljs-quote {
+            color: var(--muted);
+            font-style: italic;
+        }
+        .hljs-keyword,
+        .hljs-selector-tag,
+        .hljs-literal,
+        .hljs-section,
+        .hljs-link {
+            color: var(--red);
+        }
+        .hljs-string,
+        .hljs-attr,
+        .hljs-template-tag,
+        .hljs-template-variable,
+        .hljs-addition {
+            color: var(--red);
+        }
+        .hljs-number,
+        .hljs-meta,
+        .hljs-bullet {
+            color: var(--yellow);
+        }
+        .hljs-name,
+        .hljs-attribute,
+        .hljs-code,
+        .hljs-title {
+            color: var(--magenta);
+        }
+        .hljs-type,
+        .hljs-built_in,
+        .hljs-builtin-name,
+        .hljs-class .hljs-title,
+        .hljs-variable {
+            /* color: blue; */
+            color: var(--blue);
+        }
+        .hljs-symbol,
+        .hljs-regexp,
+        .hljs-deletion {
+            color: var(--red);
+        }
+        .hljs-emphasis {
+            font-style: italic;
+        }
+        .hljs-strong {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -286,14 +335,22 @@
         </div>
     </div>
 
-    <pre><code>function hello() {
-    console.log("silica theme");
+    <pre><code class="language-js">// syntax highlighting example provided by https://highlightjs.org/
+let mode = localStorage.getItem('silica-theme') || 'auto';
+
+function apply(m) {
+    mode = m;
+    if (mode === 'auto') html.removeAttribute('data-theme');
+    else html.setAttribute('data-theme', mode);
+    btn.textContent = labels[mode];
+    localStorage.setItem('silica-theme', mode);
 }</code></pre>
 
     <p style="margin-top: 1.5rem; color: var(--muted); font-size: 0.85rem;">
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">auto</button>
     </p>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     <script>
         const html = document.documentElement;
         const btn = document.getElementById('theme-toggle');
@@ -317,6 +374,8 @@
         });
 
         apply(mode);
+
+        hljs.highlightAll();
     </script>
 </body>
 </html>
