@@ -3,16 +3,13 @@ disclosure-default: ai-generated
 models-used:
   - deepseek-v4-pro
 providers:
-  - Moonshot AI
-  - DeepSeek
+  - Charm Hyper
 scope: |
   All code, documentation, and palette design is AI-generated with human
   prompting, review, and approval. No content enters the repository without
   the developer inspecting and accepting it. The palette itself — colors,
   hex values, and variant structure — was co-designed through iterative
   prompting and human adjustment.
-  No AI is used at runtime. This is a static color theme; no model runs
-  when the theme is applied.
 last-updated: 2026-07-24
 ---
 

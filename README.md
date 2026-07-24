@@ -23,8 +23,6 @@ Open `css/index.html` in a browser to preview the palette.
 
 ## AI Usage
 
-AI disclosure: see [AI_DISCLOSURE.md](./AI_DISCLOSURE.md).
-
 All AI-generated code and content is reviewed and approved by a human
-developer before inclusion. No AI is used at runtime.
-
+developer before inclusion. No AI is used at runtime. See
+[AI_DISCLOSURE.md](./AI_DISCLOSURE.md)
