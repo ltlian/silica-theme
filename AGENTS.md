@@ -30,7 +30,7 @@ When changing the palette, update these directories:
 
 ## Naming
 
-"Silica" — an understated, single-word name evoking sand, crystal, and
+"silica" — an understated, single-word name evoking sand, crystal, and
 matte surfaces, mapping to the reflective, non-emissive LCD aesthetic.
 
 ## Constraints

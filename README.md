@@ -1,4 +1,4 @@
-# Silica
+# silica
 
 A soft, muted color palette inspired by reflective LCDs and warm off-white UI.
 
@@ -19,8 +19,8 @@ Open `css/index.html` in a browser to preview the palette.
 
 ## Previews
 
-![Silica — light variant](screenshots/screenshot-light.png)
-![Silica — dark variant](screenshots/screenshot-dark.png)
+![silica — light variant](screenshots/screenshot-light.png)
+![silica — dark variant](screenshots/screenshot-dark.png)
 
 ## AI Usage
 
